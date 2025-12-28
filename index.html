@@ -649,14 +649,33 @@
 
     <section id="resume">
     <h2>Resume</h2>
-    <div class="card">
-        <iframe src="./resume.pdf#toolbar=0&navpanes=0" 
-                width="100%" 
-                height="800px" 
-                style="border: none;">
-        </iframe>
+    <div class="card" style="text-align:center;">
+        <p style="font-size: 19px; margin-bottom: 15px;">View my professional resume</p>
+        <button class="download-btn" onclick="toggleResume()">View Resume</button>
+        <div id="resumeContainer" style="display:none; margin-top: 20px;">
+            <iframe src="./resume.pdf#toolbar=0&navpanes=0" 
+                    width="100%" 
+                    height="800px" 
+                    style="border: none;">
+            </iframe>
+        </div>
     </div>
-    </section>
+</section>
+
+<script>
+function toggleResume() {
+    const container = document.getElementById('resumeContainer');
+    const button = event.target;
+    
+    if (container.style.display === 'none') {
+        container.style.display = 'block';
+        button.textContent = 'Hide Resume';
+    } else {
+        container.style.display = 'none';
+        button.textContent = 'View Resume';
+    }
+}
+</script>
         
 
     <!-- CONTACT -->

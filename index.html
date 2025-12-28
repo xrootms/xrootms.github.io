@@ -643,7 +643,7 @@
         <h2>Resume</h2>
         <div class="card" style="text-align:center;">
             <p style="font-size: 19px; margin-bottom: 15px;">Download my professional resume</p>
-            <a href="#" class="download-btn">Download Resume</a>
+            <a href="./resume.pdf" class="download-btn">Download Resume</a>
         </div>
     </section>
 
@@ -654,13 +654,24 @@
         <button class="download-btn" onclick="openResumeModal()">View Resume</button>
     </div>
 </section>
+
 <!-- Modal -->
 <div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000;">
     <span onclick="closeResumeModal()" style="position:absolute; top:20px; right:40px; color:#fff; font-size:40px; cursor:pointer;">&times;</span>
     <div style="padding:60px 20px; max-width:900px; margin:0 auto; background:#fff; height:90%; overflow-y:auto;">
-        <iframe src="./resume.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="100%" style="border:none;"></iframe>
+        <iframe src="./resume.pdf" width="100%" height="100%" style="border:none;"></iframe>
     </div>
 </div>
+
+<script>
+function openResumeModal() {
+    document.getElementById('resumeModal').style.display = 'block';
+}
+
+function closeResumeModal() {
+    document.getElementById('resumeModal').style.display = 'none';
+}
+</script>
         
    
 
